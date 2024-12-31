@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team CV & Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #34495e;
+            color: white;
+            font-size: 1.5em;
+        }
+        .team-section, .projects-section {
+            padding: 40px 20px;
+        }
+        .team-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .team-member {
+            position: relative;
+            width: 200px;
+            margin: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .team-member img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s;
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+        .team-member:hover img {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .team-member .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .team-member:hover .overlay {
+            opacity: 1;
+        }
+        .team-member .description {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #34495e;
+        }
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-10px);
+        }
+        .slider {
+    position: relative;
+    width: 100%;
+    height: 300px; /* يمكنك تعديل الارتفاع كما تريد */
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* الصورة ستملأ المساحة وتظل متناسبة */
+}
+.slider .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* تأكد من أن الصورة تملأ الـ container بشكل مناسب */
+}
+/* بلور على الصور */
+.blurred {
+    filter: blur(8px); /* التأثير */
+    transition: filter 0.3s ease;
+}
+
+/* إضافة النص "soon!" فوق الصور */
+.soon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-content {
+    padding: 20px;
+    z-index: 5;
+}
+
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .controls button {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+        .project-content {
+            padding: 20px;
+        }
+        .project-content h3 {
+            margin: 0 0 10px;
+        }
+        .project-content p {
+            color: #666;
+            line-height: 1.5;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #34495e;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Welcome to Our Team's Page
+</header>
+
+<section class="team-section">
+    <h2 style="text-align: center;">Meet Our Team</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="team/WhatsApp Image 2024-12-11 at 17.40.54_5430d419.jpg" alt="Team Member 1">
+            <div class="description">
+                <p><strong>Name:</strong>Mostafa Mohamed Hosny</p>
+                <p><strong>University:</strong> Borg El Arab Technological University</p>
+                <p><strong>Department:</strong> Information Technology</p>
+                <p><strong>Year:</strong>First</p>
+                <p><strong>Skills:</strong> web devolper,html,css,java script and back end</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="team/WhatsApp Image 2024-12-31 at 01.21.48_fc1358ef.jpg" alt="Team Member 2">
+            <div class="description">
+                <p><strong>Name:</strong> Ahmed Sayed Hamdy</p>
+                <p><strong>University:</strong> Borg El Arab Technological University</p>
+                <p><strong>Department:</strong>Information Technology</p>
+                <p><strong>Year:</strong> Junior</p>
+                <p><strong>Skills:</strong> Software devolper, Technical support</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="team/WhatsApp Image 2024-12-31 at 01.22.19_6f0a2f02.jpg" alt="Team Member 3">
+            <div class="description">
+                <p><strong>Name:</strong>Ziad Ayman Mohammed</p>
+                <p><strong>University:</strong>Misr International Technological University</p>
+                <p><strong>Department:</strong> Mechatronicsy</p>
+                <p><strong>Year:</strong> Third</p>
+                <p><strong>Skills:</strong>c , c++, Machine learning ,c#</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="team/4.jpg" alt="Team Member 4">
+            <div class="description">
+                <p><strong>Name:</strong>Ziad Al-Sayed Ibrahim</p>
+                <p><strong>University:</strong>Misr International Technological University</p>
+                <p><strong>Department:</strong>Artificial Intelligence</p>
+                <p><strong>Year:</strong> Third</p>
+                <p><strong>Skills:</strong>python , c , c++, Machine learning and java scrip></p>
+            </div>
+            <div class="team-member">
+                <img src="team/5.jpg" alt="Team Member 4">
+                <div class="description">
+                    <p><strong>Name:</strong>Omar Hassan Hussein</p>
+                    <p><strong>University:</strong>Borg El Arab Technological University</p>
+                    <p><strong>Department:</strong>Information Technology</p>
+                    <p><strong>Year:</strong>First</p>
+                    <p><strong>Skills:</strong>python,c,c#</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="projects-section">
+    <h2 style="text-align: center;">Our Projects</h2>
+    <div class="projects-container">
+        <div class="project">
+            <div class="slider">
+                <div class="slides">
+                    <img src="projects/glaass/IMG-20241020-WA0022.jpg" alt="Project 1 Image 1">
+                    <img src="projects/glaass/IMG-20241020-WA0023.jpg" alt="Project 1 Image 2">
+                    <img src="projects/glaass/IMG-20241020-WA0024.jpg" alt="Project 1 Image 3">
+                    <img src="projects/glaass/IMG-20241020-WA0025.jpg" alt="Project 1 Image 4">
+                    <img src="projects/glaass/IMG-20241020-WA0026.jpg" alt="Project 1 Image 4">
+                    <img src="projects/glaass/IMG-20241020-WA0027.jpg" alt="Project 1 Image 4">
+                </div>
+                <div class="controls">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Smart Glasses</h3>
+                <p>Features a 3D Virtual Human AI Assistant that appears in front of the user, enabling seamless and natural interaction.
+                    Integrates augmented reality technology to display information clearly and accurately, such as maps, meetings, and daily tasks.
+                    A simple and comfortable design resembling regular sunglasses, making it suitable for everyday use at competitive prices.
+                    </p>
+            </div>
+        </div>
+        <div class="project">
+            <div class="slider">
+                <div class="slides">
+                    <img src="projects/smart/IMG-20241230-WA0056.jpg" alt="Project 2 Image 1">
+                    <img src="projects/smart/IMG-20241230-WA0058.jpg" alt="Project 2 Image 2">
+                    <img src="projects/smart/IMG-20241230-WA0059.jpg" alt="Project 2 Image 3">
+                    <img src="projects/smart/IMG-20241230-WA0060.jpg" alt="Project 2 Image 4">
+                    <img src="projects/smart/IMG-20241230-WA0061.jpg" alt="Project 2 Image 4">
+                    <img src="projects/smart/WhatsApp Image 2024-12-31 at 00.02.35_98135620.jpg" alt="Project 2 Image 4">
+                </div>
+                <div class="controls">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Smartwatch</h3>
+                <p>Acts as a central management tool that integrates with the smart glasses and holographic projector.
+                    Provides quick information like notifications, fitness tracking, and directing the virtual assistant.
+                    Sleek and compact design suitable for everyone.
+                    </p>
+            </div>
+        </div>
+        <div class="project">
+            <div class="slider">
+                <div class="slides">
+                    <img src="projects/projector/IMG-20241231-WA0002.jpg" alt="Project 3 Image 1">
+                    <img src="projects/projector/WhatsApp Image 2024-12-31 at 00.09.02_70f22c52.jpg" alt="Project 3 Image 2">
+                    <img src="projects/projector/WhatsApp Image 2024-12-31 at 00.11.08_ae1ceb45.jpg" alt="Project 3 Image 3">
+                    <img src="projects/projector/WhatsApp Image 2024-12-31 at 00.12.06_d9a906d9.jpg" alt="Project 3 Image 4">
+                </div>
+                <div class="controls">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Holographic Projector</h3>
+                <p>Delivers an interactive 3D display experience for meetings, education, or entertainment.
+                    Projects the virtual assistant in a holographic form in front of the user, creating a more realistic experience.
+                    Bridges the gap of traditional devices with small screens by offering visual projections on any surface.</p>
+            </div>
+        </div>
+        <div class="project">
+            <div class="slider">
+                <div class="slides">
+                    <img src="projects/soon/IMG-20241020-WA0033.jpg" alt="Project 4 Image 1" class="blurred">
+                    <img src="projects/soon/IMG-20241020-WA0035.jpg" alt="Project 4 Image 2" class="blurred">
+                    <img src="projects/soon/IMG-20241020-WA0036.jpg" alt="Project 4 Image 3" class="blurred">
+                    <img src="projects/soon/IMG-20241020-WA0038.jpg" alt="Project 4 Image 4" class="blurred">
+                </div>
+                <div class="controls">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Soon</h3>
+                <p>Coming soon in 2026</p>
+            </div>
+            <div class="soon-overlay">
+                <span>soon!</span>
+            </div>
+        </div>        
+</section>
+
+<footer>
+    &copy; 2024 Our Team. All Rights Reserved.
+    <script>
+        document.querySelectorAll('.slider').forEach(slider => {
+            const slides = slider.querySelector('.slides');
+            const prevButton = slider.querySelector('.prev');
+            const nextButton = slider.querySelector('.next');
+            let currentIndex = 0;
+            const slideCount = slides.children.length;
+    
+            function goToSlide(index) {
+                if (index >= slideCount) {
+                    currentIndex = 0;
+                } else if (index < 0) {
+                    currentIndex = slideCount - 1;
+                } else {
+                    currentIndex = index;
+                }
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+    
+            prevButton.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+            });
+    
+            nextButton.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+            });
+    
+            // Automatic slide change every 3 seconds
+            setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, 3000); // 3000 ms = 3 seconds
+        });
+    </script>
+    
+    </body>
+    </html>
